@@ -82,3 +82,48 @@ function finde(liste, type){
     return {};
 }
 console.log(finde(bicycles, "Giro"));
+
+// Callback-Funktionen
+let zahlen = [1, 9, 5, 6, 17];
+function berechneQuadrat(array){
+    let ergebnis = [];
+    for(element of array){
+        const quadrat = element * element;
+        ergebnis.push(quadrat);
+    }
+    return ergebnis;
+}
+console.log(berechneQuadrat(zahlen));
+
+function berechneDasDoppelte(array){
+    let ergebnis = [];
+    for(element of array){
+        const dasDoppelte = element + element;
+        ergebnis.push(dasDoppelte);
+    }
+    return ergebnis;
+}
+console.log(berechneDasDoppelte(zahlen));
+
+function berechneIrgendwas(array, algorithmusFunktion){
+    let ergebnis = [];
+    for(element of array){
+        const einzelErgebnis = algorithmusFunktion(element);
+        ergebnis.push(einzelErgebnis);
+    }
+    return ergebnis;
+}
+
+function hochdrei(a){
+    return a*a*a;
+}
+console.log(berechneIrgendwas(zahlen, hochdrei));
+console.log(berechneIrgendwas(zahlen, Math.sqrt));
+
+// Anonyme Funktion
+console.log(berechneIrgendwas(zahlen, function(a){
+    return a*a*a*a;
+}));
+// Arrow-Syntax
+console.log(berechneIrgendwas(zahlen, (a) => a*a*a*a*a
+));
