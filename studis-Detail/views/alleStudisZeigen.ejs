@@ -1,0 +1,16 @@
+<html>
+	<head>
+		<title>Studierende</title>
+	</head>
+	<body>
+		<table>
+			<% for(var i = 0; i < liste.length; i++) { %>
+				<tr>
+					<td> <%= liste[i].name %> </td>
+					<td> <a href="/detailsZeigen?index=<%= i %>">Detail ...</a></td>
+				</tr>
+			<%}%>
+		</table>
+		<a href="/">Weiter</a>
+	</body>
+</html>
