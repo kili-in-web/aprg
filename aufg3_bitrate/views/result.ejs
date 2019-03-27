@@ -1,0 +1,22 @@
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <title>Ergebnis</title>
+    </head>
+    <body>
+        <!-- Hier frage ich ab, ob result übergeben wurde. Wenn result nicht übergeben wurde (die Eingabe also falsch ist), ist result vom Typ (Abfrage durch typeof) undefined. -->
+        <%if (typeof result == "undefined"){%>
+            <!--Ein Fehler-->
+            Fehler, korrigiere deine Eingabe!<br>
+            <a href="/hello">Neuer Versuch!</a><br>
+        <%}else{%>
+            <!-- Kein Fehler, result existiert und wird angezeigt-->
+            Das Ergebnis ist <%=result%> kB!<br>
+            <a href="/hello">Etwas neues berechnen.</a><br>
+        <%}%>
+        <!-- Ausgabe der Werte die wir eingegeben haben-->
+        Bitrate = <%=bitrate%><br>
+        Dauer = <%=dauer%><br>
+        
+    </body> 
+</html>
