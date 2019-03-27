@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alle Studierenden</title>
+    </head>
+    <body>
+        <table>
+            <% for(var i = 0; i < list.length; i++) { %>
+                <tr>
+                    <td><%= list[i].studiname %></td>
+                    <td><%= list[i].studiengang %></td>
+                    <td><%= list[i].semester %></td>
+                </tr>
+            <% } %>
+        </table>
+        <a href="/">Zurück</a>
+    </body>
+</html>
