@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alle Produkte</title>
+    </head>
+    <body>
+        <table>
+            <% for(var i = 0; i < rows.length; i++) { %>
+                <tr>
+                    <td>
+                        <%= rows[i].name %> 
+                    </td>
+                    <td>
+                        <%= rows[i].preis %>
+                    </td>
+                    <td>
+                        <a href="/onArtikelLoeschen/<%=rows[i].id%>">Löschen</a>
+                    </td>
+                </tr>
+            <% } %>
+        </table>
+        <a href="/neuerArtikel">Artikel Hinzufügen</a>
+    </body>
+</html>
