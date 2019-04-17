@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="headline">Registrierung</div>
+
+            <% if (error != null) { %> 
+                <div class="error"><%= error %></div>
+            <% } %>
+
+            <form action="/register" method="POST">
+                <input type="text" name="username" placeholder="Benutzername" required>
+
+                <input type="password" name="password" placeholder="Passwort" required>
+
+                <input type="password" name="passwordConfirm" placeholder="Passwort wiederholen" required>
+
+                <button type="submit">Registrieren</button>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link href="main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="card">
+            <div class="headline"><%= greeting %></div>
+    
+            <% if (isLoggedIn) { %> 
+                <form action="/logout" method="POST">
+                    <button type="submit">Abmelden</button>
+                </form>
+            <% } else { %>  
+                <form action="/login" method="GET">
+                    <button type="submit">Anmelden</button>
+                </form>
+                <form action="/register" method="GET">
+                    <button type="submit">Registrieren</button>
+                </form>
+                <% } %>
+        </div>
+    </body>
+</html>
